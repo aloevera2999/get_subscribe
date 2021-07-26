@@ -48,5 +48,5 @@ jobs:
          git config --local user.name "ermaozi"
          git add subscribe/v2ray.txt
          git add subscribe/clash.yml
-         git commit -m "$(date)更新订阅链接"
+         git commit -m "$(date '+%Y-%m-%d %H:%M:%S')更新订阅链接"
          git push
