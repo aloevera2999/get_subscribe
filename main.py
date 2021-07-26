@@ -31,10 +31,18 @@ def getSubscribeUrl():
     if clashList:
         clashTxt = requests.request(
             "GET", clashList[-1].replace('amp;', ''), verify=False)
-        day = time.strftime('%m%d%H%M', time.localtime(time.time()))
+        day = time.strftime('%m-%d %H:%M', time.localtime(time.time()))
         with open(dirs + '/clash.yml', 'wb') as f:
             clash_content = clashTxt.text.replace('https://www.mattkaydiary.com', day)
             f.write(clash_content.encode("utf-8"))
+
+    date_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    if v2rayList or clashList:
+        update_log = f"[{date_str}] 更新成功! √"
+    else:
+        update_log = f"[{date_str}] 更新失败! ×"
+    with open(dirs + '/update.log', 'a') as f:
+        f.write(clash_content.encode("utf-8"))
 
 
 def main():
