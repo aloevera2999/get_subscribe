@@ -12,7 +12,7 @@ jobs:
         git config --global user.name "ermaozi" 
         git config --global user.email admin@ermao.net 
         git checkout --orphan new_branch
-        git commit -m "[feature]:initial commit"
+        git commit -m "初始化仓库"
         git branch -D main
         git branch -m main
         git push -f origin main
