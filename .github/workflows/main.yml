@@ -47,7 +47,6 @@ jobs:
          git config core.ignorecase false
          git config --local user.email "admin@ermao.net"
          git config --local user.name "ermaozi"
-         git add subscribe/v2ray.txt
-         git add subscribe/clash.yml
+         git add .
          git commit -m "$(date '+%Y-%m-%d %H:%M:%S')更新订阅链接"
          git push
