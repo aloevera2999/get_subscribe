@@ -42,7 +42,7 @@ def getSubscribeUrl():
     else:
         update_log = f"[{date_str}] 更新失败! ×"
     with open(dirs + '/update.log', 'a') as f:
-        f.write(clash_content.encode("utf-8"))
+        f.write(update_log)
 
 
 def main():
